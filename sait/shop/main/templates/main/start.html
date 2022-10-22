@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Start</title>
+</head>
+<body>
+{%block content%}
+    {%for el in data %}
+        {{el.name}}
+        {{el.price}}
+        {{el.descriptoin}}
+    {%endfor%}
+{%endblock%}
+</body>
+</html>
