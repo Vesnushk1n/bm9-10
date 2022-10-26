@@ -1,9 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Product, Category
 
 def start(response):
-    dat = {'data': [1,2,3,4], 'title': 'Старт'}
-    return render(response, 'main/start.html', dat)
+    categories = Category.objects.all()
+    products = Product.objects.all()
+    return render(response, 'main/start.html', categories, products)
 
 # Create your views here.
 def end(response):
